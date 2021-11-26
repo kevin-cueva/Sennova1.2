@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consitucion</title>
+</head>
+<body>
+
+    <div class="container">
+        <form action="/constitucion/resultado" method="post" id="formulario" name="formulario">
+            {% csrf_token %} <!--seguridad-->
+            {{ form.as_p }}
+            <div class="form-check">
+            {% for interrogante in preguntas %}
+                
+            <fieldset>
+                <legend>{{interrogante}}</legend> <!--Pregunta -->
+                {% for respuesta in respuestas %}
+
+                    {% if interrogante == respuesta.pregunta %} 
+
+                    <!--Muestra las respuestas-->
+                    <label class="form-check-label">
+                        <input type="radio" value="{{respuesta.contenido}}" class="form-check-input" name="{{interrogante.id}}" id="{{interrogante.id}}" required>
+                                {{respuesta.contenido}} 
+                    </label> <br>   
+
+                    {% endif %} 
+
+                {% endfor %}
+        
+            {% endfor %}
+        </fieldset>
+        
+        </div>
+        <input type="submit" value="Enviar datos" class="btn btn-primary">
+        </form>
+      
+    </div>
+    <div id='valores'>
+
+    </div>
+    <script>
+        function mostrarValores(){
+            let formulario2 = []
+            
+            let formulario = document.forms['formulario']; // aAccede al formulario por su id
+            let h = JSON.parse("{{preguntas}}")       
+            console.log(h)
+            let texto ='';    // donde se almacena los valores del formulario
+            for(let elemento of formulario){
+                texto += elemento.value + '<br/>';
+            }
+            document.getElementById('valores').innerHTML = h;
+            document.getElementById('valores').innerHTML = texto; //accde a DOM con el id valores y copia los valores del form
+        }
+        </script>
+
+
+</body>
+</html>

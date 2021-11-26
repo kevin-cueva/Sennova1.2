@@ -1,0 +1,152 @@
+<html>
+    <head>
+        {% load static %}
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--responsive-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--ButtonsIcon-->
+        <link rel="stylesheet" href="{%static 'estilo.css' %}"><!--ourStyle-->
+        <script type="text/javascript" src="script.js"></script><!--ourJava-->
+
+        <meta charset="utf-8">
+        <Title>Pagina Principal</Title>
+    </head>
+
+    <body>
+    
+        <nav class="navbar navbar-dark" style="background-color: #fc7323;">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="nav-link" href="#" style="background-color: #ffffff; color:#fc7323;">Logout</a>
+        </nav>
+    
+    </br>
+    <div class="p-3 mb-2 bg-white text-dark">
+        <h3>
+            {{nombre}}
+            <small class="text-muted">Lvl {{nivel}}</small>
+        </h3>
+    </div>
+
+    <center>            
+        <div class="container">
+           
+            <div class="row">
+
+                <div class="col-md -6">
+                <div class="card">
+                    <img class="card-img-top" src="{%static 'img/consEmpresas.jpeg'%}" alt="Card image cap" >
+                    <div class="card-body">
+                        <h5 class="card-title">CONSTITUCIÓN DE EMPRESAS</h5>
+                        <p class="card-text">Querido aprendiz,  el proyecto de constituir tu empresa con todos sus requisitos, se convertirá en realidad de manera literal. ¡Feliz inicio!</p>
+                        <button class="btn btn-primario btn-lg btn-block fa fa-bars" type="button" data-toggle="collapse" data-target="#contenido1" aria-expanded="false" aria-controls="contenido1"></button>
+                    </div>
+                </div>
+                </div>
+                <div class="col-md -6">
+                <div class="collapse" id="contenido1">
+                    <div class="card card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="{% url 'Cons_Aprende' %}"><img src="iconos/book.png"> Aprende</a></li>
+                            <li class="list-group-item"><a href="{% url 'Cons_Evalua' %}"><img src="iconos/test.png"> Evalua</a></li>
+                            <li class="list-group-item"><a href="https://huse360.github.io/novela/"><img src="iconos/vr.png"> Practica</li></a>
+                            <li class="list-group-item"><a href="https://huse360.github.io/vr/"><img src="iconos/vr.png"> Realidad Virtual</li></a>
+                        </ul>
+                    </div>
+                </div>    
+                </div>
+                 
+            </div><br />
+            <div class="row">
+
+                <div class="col-md -6">
+                <div class="card">
+                    <img class="card-img-top" src="Temas/NormaContable/normac.jpeg" alt="Card image cap" >
+                    <div class="card-body">
+                        <h5 class="card-title">NORMATIVIDAD CONTABLE</h5>
+                        <p class="card-text">Llegó el momento de comprender cual es el marco normativo de tu empresa, será muy divertido y lo mejor de todo es que aprenderás mucho.</p>
+                        <button class="btn btn-primario btn-lg btn-block fa fa-bars" type="button" data-toggle="collapse" data-target="#contenido2" aria-expanded="false" aria-controls="contenido2"></button>
+                    </div>
+                </div>
+                </div>
+                <div class="col-md -6">
+                <div class="collapse" id="contenido2">
+                    <div class="card card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="{% url 'Norm_Aprende' %}"><img src="iconos/book.png"> Aprende</a></li>
+                            <li class="list-group-item"><a href="{% url 'Norm_Evalua' %}"><img src="iconos/test.png"> Evalua</a></li>
+                            <li class="list-group-item"><img src="iconos/test.png"> Evalua</li>
+                            <li class="list-group-item"><img src="iconos/vr.png"> Practica</li>
+                        </ul>
+                    </div>
+                </div>    
+                </div>
+                 
+            </div>
+            <br />
+            <div class="row">
+
+                <div class="col-md -6">
+                <div class="card">
+                    <img class="card-img-top" src="Temas/Activos/iactivos.jpeg" alt="Card image cap" >
+                    <div class="card-body">
+                        <h5 class="card-title">ACTIVOS</h5>
+                        <p class="card-text">Querido aprendiz, a partir de esta etapa empezarás a constuir las bases financieras de tu empresa, explorar este mundo, es de las mejores oportunidades que debes aprovechar.</p>
+                        <button class="btn btn-primario btn-lg btn-block fa fa-bars" type="button" data-toggle="collapse" data-target="#contenido3" aria-expanded="false" aria-controls="contenido3"></button>
+                    </div>
+                </div>
+                </div>
+                <div class="col-md -6">
+                <div class="collapse" id="contenido3">
+                    <div class="card card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="Temas/ClasificaEmpresa/clasificae.html"><img src="iconos/book.png"> Aprende</a></li>
+                            <li class="list-group-item"><img src="iconos/test.png"> Evalua</li>
+                            <li class="list-group-item"><img src="iconos/vr.png"> Practica</li>
+                        </ul>
+                    </div>
+                </div>    
+                </div>
+                 
+            </div>
+            <br />
+            <div class="row">
+
+                <div class="col-md -6">
+                <div class="card">
+                    <img class="card-img-top" src="Temas/Pasivos/ipasivos.jpeg" alt="Card image cap" >
+                    <div class="card-body">
+                        <h5 class="card-title">PASIVOS</h5>
+                        <p class="card-text">¿Pasivos?, sÍ pasivos, no lo veas como una deuda, asumelo como la palanca finaciera que te hará surgir y posicionarte en el mercado,sigue adelante y maneja la situación como todo un experto, eres capaz y aquí estaré para acompañarte.</p>
+                        <button class="btn btn-primario btn-lg btn-block fa fa-bars" type="button" data-toggle="collapse" data-target="#contenido4" aria-expanded="false" aria-controls="contenido4"></button>
+                    </div>
+                </div>
+                </div>
+                <div class="col-md -6">
+                <div class="collapse" id="contenido4">
+                    <div class="card card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="Temas/ClasificaEmpresa/clasificae.html"><img src="iconos/book.png"> Aprende</a></li>
+                            <li class="list-group-item"><img src="iconos/test.png"> Evalua</li>
+                            <li class="list-group-item"><img src="iconos/vr.png"> Practica</li>
+                        </ul>
+                    </div>
+                </div>    
+                </div>
+                 
+            </div>
+            <br />
+
+        </div>
+
+    
+    </center>
+
+    <footer class="navbar navbar-dark" style="background-color: #fc7323;">
+        <a class="nav-link" href="#" style="color: #ffffff;">soporte</a>
+    </footer>
+
+    </body>
+</html>
