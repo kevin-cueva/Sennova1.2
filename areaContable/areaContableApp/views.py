@@ -97,7 +97,7 @@ def index(request): #vista para ingresar a la plataforma
             return(redirect('Error'))
         
     
-    return(render(request, 'from_login.html'))
+    return(render(request, 'index.html'))
 
 def home(request):
     estudiante_post = request.session.get('estudiante')
