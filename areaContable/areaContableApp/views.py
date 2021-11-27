@@ -86,6 +86,7 @@ def index(request): #vista para ingresar a la plataforma
                         'numero': numero
                     }
                     request.session['estudiante'] = estudiante #Variable de dicionario disponible
+                    print("ESTOY ACA\n")
                     return(redirect(f'Home')) #Paso
 
                 else: #Si la contraseña es incorrecta
