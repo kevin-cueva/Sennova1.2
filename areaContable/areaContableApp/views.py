@@ -6,8 +6,6 @@ import sqlite3
 
 # Create your views here.
 
-def index(request):
-    return(render(request, 'index.html'))
 
 def registro(request):
     con = sqlite3.connect('db.sqlite3') #nombre de la base de datos
@@ -49,7 +47,7 @@ def registro(request):
 
     return(render(request, 'form_register.html'))
 
-def login(request): #vista para ingresar a la plataforma
+def index(request): #vista para ingresar a la plataforma
     """
     Nota: Esta vista es la encargada de validar en login del usuario y darle entrada al home
 
@@ -88,7 +86,7 @@ def login(request): #vista para ingresar a la plataforma
                         'numero': numero
                     }
                     request.session['estudiante'] = estudiante #Variable de dicionario disponible
-                    return(redirect(f'Home'))
+                    return(redirect(f'Home')) #Paso
 
                 else: #Si la contraseña es incorrecta
                     request.session['error'] = {'error':'login'}
