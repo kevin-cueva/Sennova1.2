@@ -49,16 +49,20 @@
                 <div class="collapse" id="contenido1">
                     <div class="card card-body">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="{% url 'Cons_Aprende' %}"><img src="iconos/book.png"> Aprende</a></li>
-                            <li class="list-group-item"><a href="{% url 'Cons_Evalua' %}"><img src="iconos/test.png"> Evalua</a></li>
-                            <li class="list-group-item"><a href="https://huse360.github.io/novela/"><img src="iconos/vr.png"> Practica</li></a>
-                            <li class="list-group-item"><a href="https://huse360.github.io/vr/"><img src="iconos/vr.png"> Realidad Virtual</li></a>
+                            <li class="list-group-item"><a href="{% url 'Cons_Aprende' %}"><img src="{%static 'iconos/book.png'%}"> Aprende</a></li>
+                            <li class="list-group-item"><a href="{% url 'Cons_Evalua' %}"><img src="{%static 'iconos/test.png'%}"> Evalua</a></li>
+                            <li class="list-group-item"><a href="https://kevin-cueva.github.io/novela/constitucion.html"><img src="{%static 'iconos/vr.png'%}"> Practica</a></li>
                         </ul>
                     </div>
                 </div>    
                 </div>
                  
-            </div><br />
+            </div>
+			
+			<br />
+            <button type="button" onclick="window.open('https://kevin-cueva.github.io/vr/')" class="btn btn-vr btn-outline-warning btn-lg btn-block"><img src="{%static 'iconos/glases.png'%}"><br /> Sesión de realidad virtual inmersiva</button>
+            <br />
+			
             <div class="row">
 
                 <div class="col-md -6">
@@ -75,73 +79,22 @@
                 <div class="collapse" id="contenido2">
                     <div class="card card-body">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="{% url 'Norm_Aprende' %}"><img src="iconos/book.png"> Aprende</a></li>
-                            <li class="list-group-item"><a href="{% url 'Norm_Evalua' %}"><img src="iconos/test.png"> Evalua</a></li>
-                            <li class="list-group-item"><img src="iconos/test.png"> Evalua</li>
-                            <li class="list-group-item"><img src="iconos/vr.png"> Practica</li>
-                        </ul>
+                            <li class="list-group-item"><a href="{% url 'Norm_Aprende' %}"><img src="{%static 'iconos/book.png'%}"> Aprende</a></li>
+                            <li class="list-group-item"><a href="{% url 'Norm_Evalua' %}"><img src="{%static 'iconos/test.png'%}"> Evalua</a></li>
+							<li class="list-group-item"><a href="https://kevin-cueva.github.io/novela/normas.html"><img src="{%static 'iconos/vr.png'%}"> Practica</a></li>
+						</ul>
                     </div>
                 </div>    
                 </div>
                  
             </div>
-            <br />
-            <div class="row">
-
-                <div class="col-md -6">
-                <div class="card">
-                    <img class="card-img-top" src="Temas/Activos/iactivos.jpeg" alt="Card image cap" >
-                    <div class="card-body">
-                        <h5 class="card-title">ACTIVOS</h5>
-                        <p class="card-text">Querido aprendiz, a partir de esta etapa empezarás a constuir las bases financieras de tu empresa, explorar este mundo, es de las mejores oportunidades que debes aprovechar.</p>
-                        <button class="btn btn-primario btn-lg btn-block fa fa-bars" type="button" data-toggle="collapse" data-target="#contenido3" aria-expanded="false" aria-controls="contenido3"></button>
-                    </div>
-                </div>
-                </div>
-                <div class="col-md -6">
-                <div class="collapse" id="contenido3">
-                    <div class="card card-body">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="Temas/ClasificaEmpresa/clasificae.html"><img src="iconos/book.png"> Aprende</a></li>
-                            <li class="list-group-item"><img src="iconos/test.png"> Evalua</li>
-                            <li class="list-group-item"><img src="iconos/vr.png"> Practica</li>
-                        </ul>
-                    </div>
-                </div>    
-                </div>
-                 
-            </div>
-            <br />
-            <div class="row">
-
-                <div class="col-md -6">
-                <div class="card">
-                    <img class="card-img-top" src="Temas/Pasivos/ipasivos.jpeg" alt="Card image cap" >
-                    <div class="card-body">
-                        <h5 class="card-title">PASIVOS</h5>
-                        <p class="card-text">¿Pasivos?, sÍ pasivos, no lo veas como una deuda, asumelo como la palanca finaciera que te hará surgir y posicionarte en el mercado,sigue adelante y maneja la situación como todo un experto, eres capaz y aquí estaré para acompañarte.</p>
-                        <button class="btn btn-primario btn-lg btn-block fa fa-bars" type="button" data-toggle="collapse" data-target="#contenido4" aria-expanded="false" aria-controls="contenido4"></button>
-                    </div>
-                </div>
-                </div>
-                <div class="col-md -6">
-                <div class="collapse" id="contenido4">
-                    <div class="card card-body">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="Temas/ClasificaEmpresa/clasificae.html"><img src="iconos/book.png"> Aprende</a></li>
-                            <li class="list-group-item"><img src="iconos/test.png"> Evalua</li>
-                            <li class="list-group-item"><img src="iconos/vr.png"> Practica</li>
-                        </ul>
-                    </div>
-                </div>    
-                </div>
-                 
-            </div>
-            <br />
 
         </div>
 
-    
+    	<br />
+        <button type="button" class="btn btn-c1 btn-lg btn-block"><img src="{%static 'iconos/creando.gif'%}" width="90" height="auto"><br />Creando mas temas ...</button>
+        <br />
+		
     </center>
 
     <footer class="navbar navbar-dark" style="background-color: #fc7323;">

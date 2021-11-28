@@ -1,16 +1,46 @@
 body {
-    background-color: #ffffff;
-  }
-
-  .btn-primario {
-    color: #fff;
-    background-color: #fc7323;;
-    border-color: #fc7323;;
+  background-color: #ffffff;
 }
 
-.btn-primario:hover {
+.btn-primario {
   color: #fff;
-  background-color: #f88746;;
+  background-color: #fc7323;
   border-color: #fc7323;;
 }
 
+.btn-primario:hover {
+color: #fff;
+background-color: #f88746;
+border-color: #fc7323;;
+}
+
+.btn-vr {
+color: #fc7323;
+border-color: #fc7323;
+}
+
+.btn-vr:hover {
+color: #FFFF;
+background-color: #fc7323;
+border-color: #ffff;
+}
+
+.btn-c1 {
+color: #fc7323;
+border-color: #fc7323;
+background-color: #ffff;
+}
+
+.btn-c1:hover {
+color: #fc7323;
+border-color: #fc7323;
+background-color: #ffff;
+}
+
+
+input:invalid{
+border: 1px solid red;
+}
+input:valid{
+border: 1px solid green;
+}
