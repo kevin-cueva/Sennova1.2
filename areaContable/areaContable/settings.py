@@ -126,7 +126,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    '/media/neil/KEVIN_CUEVA/Area Contable/areaContable/template/static',
+    '/media/neil/KEVIN_CUEVA/SENNOVA2/areaContable/template/static',
 ]
 
 # Default primary key field type

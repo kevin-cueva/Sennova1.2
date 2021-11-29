@@ -46,6 +46,9 @@ def constitucionEmpresas_Evalua(request): #Examen del tema constitucion de empre
     return render(request,'constitucionEmpresas/evalua.html', datos_evalua)
 
 def constitucionEmpresas_Resultados(request):
+    """
+    Evalua las respuestas entregadas
+    """
     estudiante = request.session.get('estudiante')
     cedula = estudiante['numero']
 
@@ -92,9 +95,9 @@ def constitucionEmpresas_Resultados(request):
                 con.commit()
 
                 
-            return HttpResponse('Paso el examen')
+            return render(request, 'qcorrecto.html') #Paso y cambia el nivel
         else: 
-            return HttpResponse('No paso el examen')
+            return render(request, 'qfallo.html') #Paso pero no cambia el nivel
     
     
     return HttpResponse('hola')    
