@@ -7,10 +7,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consitucion</title>
+    <title>Normatividad</title>
 </head>
 <body>
-
+    <nav class="navbar navbar-dark" style="background-color: #fc7323;">
+        <a class="navbar-brand" href="../home">Home</a>
+    </nav><br/>
+    
     <div class="container">
         <form action="/normatividad/resultado" method="post" id="formulario" name="formulario">
             {% csrf_token %} <!--seguridad-->
@@ -37,8 +40,8 @@
             {% endfor %}
         </fieldset>
         
-        </div>
-        <input type="submit" value="Enviar datos" class="btn btn-primary">
+        </div><br/>
+        <center><input type="submit" value="Enviar datos" class="btn btn-primary"></center>
         </form>
       
     </div>
