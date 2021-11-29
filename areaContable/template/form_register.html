@@ -7,26 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'estilos.css' %}">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Registro</title>
 </head>
 <body>
     
-    <div class="container">
-    <h1>REGISTER</h1>
-    <form action="/registro/" method="POST" id="formulario">
+    <div class="w3-container">
+        <div class="w3-container w3-orange">
+            <h2 style="color:#ffff;">REGISTRO</h2>
+          </div><br/>
+    <form action="/registro/" method="POST" id="formulario" class="w3-card-4">
         {% csrf_token %} <!--seguridad-->
         {{ form.as_p }}
-        <p><label>Nombres<br><input class="imp" type="text" id="nombre" name="nombre" placeholder="Nombre(s)"required pattern="^[a-zA-ZÀ-ÿ\s]{1,40}$"></label></p>
+        <p><label>Nombres<br><input class="w3-input" class="imp" type="text"  id="nombre" name="nombre" placeholder="Nombre(s)"required pattern="^[a-zA-ZÀ-ÿ\s]{1,40}$"></label></p>
 
-        <p><label>Apellido<br><input type="text" id="apl" name="apl" placeholder="Apellido(s)" required pattern="^[a-zA-ZÀ-ÿ\s]{1,40}$"></label></p>
+        <p><label>Apellido<br><input type="text" class="w3-input" id="apl" name="apl" placeholder="Apellido(s)" required pattern="^[a-zA-ZÀ-ÿ\s]{1,40}$"></label></p>
 
-        <p><label>Email<br><input type="email" id="email" name="email" placeholder="tunombre@correo.com" required ></label></p>
-        <p><label>Numero de Documento<br><input type="number" id="documento" name="documento" required pattern="^.{6,20}$"></label></p>
-        <p><label>contraseña<br><input type="password" id="contra1" name="contra1" required pattern="^.{6,20}$"></label></p>
+        <p><label>Email<br><input type="email" class="w3-input" id="email" name="email" placeholder="tunombre@correo.com" required ></label></p>
+        <p><label>Numero de Documento<br><input type="number" class="w3-input" id="documento" name="documento" required pattern="^.{6,20}$"></label></p>
+        <p><label>contraseña<br><input type="password" class="w3-input" id="contra1" name="contra1" required pattern="^.{6,20}$"></label></p>
 
-        <p><label>Repita Contraseña<br><input type="password" id="contra2" name="contra2" required="required" pattern="^.{6,20}$"></label></p>
+        <p><label>Repita Contraseña<br><input type="password" class="w3-input" id="contra2" name="contra2" required="required" pattern="^.{6,20}$"></label></p>
         <p>Mas de 6 caracteres, una Mayuscula y una mibusula: ejemmplo: 123456Ml</p>
-        <button type="submit" id="submit">Registrarse</button>
+        <button type="submit" id="submit" class="btn btn-primary btn-lg">Registrarse</button>
 
     </form>
 

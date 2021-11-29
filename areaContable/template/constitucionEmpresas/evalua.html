@@ -11,6 +11,10 @@
 </head>
 <body>
 
+    <nav class="navbar navbar-dark" style="background-color: #fc7323;">
+        <a class="navbar-brand" href="#">Navbar</a>
+    </nav><br/>
+
     <div class="container">
         <form action="/constitucion/resultado" method="post" id="formulario" name="formulario">
             {% csrf_token %} <!--seguridad-->
@@ -60,7 +64,6 @@
             document.getElementById('valores').innerHTML = texto; //accde a DOM con el id valores y copia los valores del form
         }
         </script>
-
 
 </body>
 </html>
