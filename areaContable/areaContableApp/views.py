@@ -35,7 +35,7 @@ def registro(request):
                 con.commit()
                 a = cur.rowcount
                 print(a)
-                return(redirect('Login'))
+                return(redirect('Login'))    
             else:
                 error = {'error':'clave'}
                 request.session['error'] = error #mandando el diccionario pasar
