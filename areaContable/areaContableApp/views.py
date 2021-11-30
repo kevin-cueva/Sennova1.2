@@ -35,7 +35,7 @@ def registro(request):
                 con.commit()
                 a = cur.rowcount
                 print(a)
-                return(render(request, 'home.html'))
+                return(redirect('Login'))
             else:
                 error = {'error':'clave'}
                 request.session['error'] = error #mandando el diccionario pasar
@@ -100,9 +100,23 @@ def index(request): #vista para ingresar a la plataforma
     
     return(render(request, 'index.html'))
 
+def logout(request):
+    """Vista ebcargada de hacer logout del usuario"""
+    estudiante = { #variable con los datos ya validados
+        'nombre': False,
+        'nivel': False,
+        'numero': False
+                    }
+    request.session['estudiante'] = estudiante
+    return(redirect(f'Home')) #Paso
+
 def home(request):
     estudiante_post = request.session.get('estudiante')
     estudiante_cedula = estudiante_post['numero'] #Numero de cedula para buscar los datos
+    print(estudiante_cedula)
+    
+    if estudiante_cedula == False:
+        return(redirect(f'Login')) #Paso
 
     con = sqlite3.connect('db.sqlite3') #nombre de la base de datos y conexion
     cur = con.cursor()  #cursor
