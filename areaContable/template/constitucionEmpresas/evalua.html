@@ -7,12 +7,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+
     <title>Consitucion</title>
 </head>
 <body>
 
     <nav class="navbar navbar-dark" style="background-color: #fc7323;">
-        <a class="navbar-brand" href="../home">Home</a>
+        <a class="navbar-brand" href="../home">Home  <i class="fas fa-home"></i></a>
     </nav><br/>
 
     <div class="container">
@@ -20,8 +24,8 @@
             {% csrf_token %} <!--seguridad-->
             {{ form.as_p }}
             <div class="form-check">
+            
             {% for interrogante in preguntas %}
-                
             <fieldset>
                 <legend>{{interrogante}}</legend> <!--Pregunta -->
                 {% for respuesta in respuestas %}
@@ -30,7 +34,7 @@
 
                     <!--Muestra las respuestas-->
                     <label class="form-check-label">
-                        <input type="radio" value="{{respuesta.contenido}}" class="form-check-input" name="{{interrogante.id}}" id="{{interrogante.id}}" required>
+                        <input type="radio" value="{{respuesta.contenido}}" class="form-check-input" name="{{interrogante.id}}" id="{{interrogante.id}}" required >
                                 {{respuesta.contenido}} 
                     </label> <br>   
 
@@ -39,9 +43,8 @@
                 {% endfor %}
         
             {% endfor %}
-        </fieldset>
-        
-        </div><br/>
+        </fieldset> 
+        </div><br>
         <center><input type="submit" value="Enviar datos" class="btn btn-primary"></center>
         </form>
       

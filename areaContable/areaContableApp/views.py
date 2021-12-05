@@ -134,7 +134,7 @@ def home(request):
     nivel = datos[4] #Envia el nivel
     
     estudiante = { #variable con los datos ya validados
-                        'nombre': nombre,
+                        'nombre': nombre.upper(),
                         'nivel': nivel,
                         
                  }
