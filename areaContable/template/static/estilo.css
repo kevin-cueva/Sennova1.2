@@ -1,5 +1,5 @@
 body {
-  background-color: #ffffff;
+  background-image: linear-gradient(to right, #ffffff, #fffbff, #fff6f5, #fff7de, #ffffd0);
 }
 
 .btn-primario {
@@ -34,7 +34,7 @@ background-color: #ffff;
 .btn-c1:hover {
 color: #fc7323;
 border-color: #fc7323;
-background-color: #ffff;
+background-image: linear-gradient(to right, #ffffff, #fffbff, #fff6f5, #fff7de, #ffffd0);
 }
 
 
@@ -55,4 +55,13 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.nombre{
+  color:#333;
+  font-weight: 300;
+  font-size: 20px;
+}
+.parrafo{
+  color:#333;
 }
