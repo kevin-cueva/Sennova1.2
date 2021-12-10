@@ -25,4 +25,5 @@ urlpatterns = [
     path('', include('areaContableApp.urls')),
     path('', include('constitucion_de_empresa.urls')),
     path('', include('normatividad_contable.urls')),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] 
+#+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
