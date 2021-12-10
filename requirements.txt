@@ -16,13 +16,11 @@ cycler==0.10.0
 dbus-python==1.2.16
 distlib==0.3.0
 distro==1.4.0
-distro-info===0.23ubuntu1
 dj-static==0.0.6
 Django==3.2.7
 duplicity==0.8.12.0
 ecdsa==0.17.0
 entrypoints==0.3
-esptool==3.1
 fasteners==0.14.1
 filelock==3.0.12
 future==0.18.2
