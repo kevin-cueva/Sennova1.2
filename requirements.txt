@@ -73,7 +73,6 @@ sqlparse==0.4.2
 starlette==0.17.1
 static3==0.7.0
 systemd-python==234
-ufw==0.36
 unattended-upgrades==0.1
 urllib3==1.25.8
 uvicorn==0.15.0
