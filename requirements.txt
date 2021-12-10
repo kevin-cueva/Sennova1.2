@@ -3,9 +3,6 @@ ajsonrpc==1.2.0
 Django==3.2.7
 future==0.18.2
 gunicorn==20.1.0
-python-apt==2.0.0+ubuntu0.20.4.6
-python-dateutil==2.7.3
-python-debian===0.1.36ubuntu1
 six==1.14.0
 sniffio==1.2.0
 sqlparse==0.4.2
